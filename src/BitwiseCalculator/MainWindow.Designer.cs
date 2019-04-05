@@ -37,6 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tbxBin = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.cbxAutoCalc = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // tbxExpression
@@ -45,7 +46,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbxExpression.Location = new System.Drawing.Point(12, 35);
             this.tbxExpression.Name = "tbxExpression";
-            this.tbxExpression.Size = new System.Drawing.Size(369, 20);
+            this.tbxExpression.Size = new System.Drawing.Size(371, 20);
             this.tbxExpression.TabIndex = 0;
             // 
             // btnCalc
@@ -56,7 +57,6 @@
             this.btnCalc.TabIndex = 1;
             this.btnCalc.Text = "Calculate";
             this.btnCalc.UseVisualStyleBackColor = true;
-            this.btnCalc.Click += new System.EventHandler(this.BtnCalc_Click);
             // 
             // label1
             // 
@@ -76,7 +76,7 @@
             this.tbxDec.Location = new System.Drawing.Point(66, 61);
             this.tbxDec.Name = "tbxDec";
             this.tbxDec.ReadOnly = true;
-            this.tbxDec.Size = new System.Drawing.Size(92, 20);
+            this.tbxDec.Size = new System.Drawing.Size(315, 20);
             this.tbxDec.TabIndex = 3;
             // 
             // label2
@@ -95,13 +95,13 @@
             this.tbxHex.Location = new System.Drawing.Point(66, 85);
             this.tbxHex.Name = "tbxHex";
             this.tbxHex.ReadOnly = true;
-            this.tbxHex.Size = new System.Drawing.Size(92, 20);
+            this.tbxHex.Size = new System.Drawing.Size(315, 20);
             this.tbxHex.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 87);
+            this.label3.Location = new System.Drawing.Point(31, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 4;
@@ -114,23 +114,36 @@
             this.tbxBin.Location = new System.Drawing.Point(66, 109);
             this.tbxBin.Name = "tbxBin";
             this.tbxBin.ReadOnly = true;
-            this.tbxBin.Size = new System.Drawing.Size(92, 20);
+            this.tbxBin.Size = new System.Drawing.Size(315, 20);
             this.tbxBin.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 113);
+            this.label4.Location = new System.Drawing.Point(21, 112);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Binary :";
             // 
+            // cbxAutoCalc
+            // 
+            this.cbxAutoCalc.AutoSize = true;
+            this.cbxAutoCalc.Checked = true;
+            this.cbxAutoCalc.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxAutoCalc.Location = new System.Drawing.Point(244, 12);
+            this.cbxAutoCalc.Name = "cbxAutoCalc";
+            this.cbxAutoCalc.Size = new System.Drawing.Size(135, 17);
+            this.cbxAutoCalc.TabIndex = 5;
+            this.cbxAutoCalc.Text = "Automatically Calculate";
+            this.cbxAutoCalc.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 169);
+            this.ClientSize = new System.Drawing.Size(393, 169);
+            this.Controls.Add(this.cbxAutoCalc);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbxBin);
             this.Controls.Add(this.label3);
@@ -140,12 +153,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCalc);
             this.Controls.Add(this.tbxExpression);
+            this.Icon = global::BitwiseCalculator.Properties.Resources.app;
             this.KeyPreview = true;
             this.MaximumSize = new System.Drawing.Size(800, 208);
             this.MinimumSize = new System.Drawing.Size(350, 208);
             this.Name = "MainWindow";
-            this.ShowIcon = false;
-            this.Text = "Bitwise Calculator";
+            this.Text = "Cute Little Bitwise Calculator";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainWindow_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -163,6 +176,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbxBin;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox cbxAutoCalc;
     }
 }
 
